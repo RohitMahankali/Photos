@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
+	<MenuBar fx:id="mnbBar" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Actions">
+          <items>
+            <MenuItem fx:id="mnuLogoutUser" mnemonicParsing="false" text="Logout" onAction="#logout" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="mnuQuitUser" mnemonicParsing="false" text="Quit" onAction="#quit" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+	<children>
+    	<ListView fx:id="lstUsers" layoutX="50.0" layoutY="40.0" prefHeight="300.0" prefWidth="200.0" />
+      	<Button fx:id="btnAddUser" layoutX="270.0" layoutY="80" mnemonicParsing="false" onAction="#addUser" text="Add User" />
+     	<Button fx:id="btnDeleteUser" layoutX="365.0" layoutY="80.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete User" />
+    	<Label alignment="CENTER" layoutX="85" layoutY="00" prefHeight="34.0" prefWidth="112.0" text="Existing Users" />
+    	<TextField fx:id="txtManage" layoutX="270" layoutY="40.0" prefHeight="27.0" prefWidth="185.0" promptText="Enter username:" />
+     	<Label fx:id="lblStatus" alignment="CENTER" layoutX="212.0" layoutY="00.0" prefHeight="27.0" prefWidth="262.0" />
+	</children>
+</AnchorPane>

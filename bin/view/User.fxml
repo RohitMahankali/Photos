@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="361.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
+  <MenuBar fx:id="mnbBar" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Actions">
+          <items>
+            <MenuItem fx:id="mnuLogoutUser" mnemonicParsing="false" text="Logout" onAction="#logout" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="mnuQuitUser" mnemonicParsing="false" text="Quit" onAction="#quit" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="350.0" prefWidth="531.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ListView fx:id="lstAlbums" onMousePressed="#onPress" layoutX="55.0" layoutY="14.0" prefHeight="200.0" prefWidth="305.0" />
+            <Label fx:id="lblName" layoutX="55.0" layoutY="224.0" text="Album Name:" />
+            <Label fx:id="lblNumber" layoutX="55.0" layoutY="248.0" text="Number of Photos:" />
+            <Label fx:id="lblDateRange" layoutX="55.0" layoutY="272.0" text="Date Range:" />
+            <Button fx:id="btnCreateAlbum" layoutX="410.0" layoutY="22.0" mnemonicParsing="false" onAction="#createAlbum" prefHeight="25.0" prefWidth="98.0" text="Create Album" />
+            <Button fx:id="btnDeleteAlbum" layoutX="410.0" layoutY="62.0" mnemonicParsing="false" onAction="#deleteAlbum" prefHeight="25.0" prefWidth="98.0" text="Delete Album" />
+            <Button fx:id="btnRenameAlbum" layoutX="410.0" layoutY="102.0" mnemonicParsing="false" onAction="#renameAlbum" text="Rename Album" />
+            <Button fx:id="btnOpenAlbum" layoutX="410.0" layoutY="142.0" mnemonicParsing="false" onAction="#openAlbum" prefHeight="25.0" prefWidth="98.0" text="Open Album" />
+            <Button fx:id="btnSearch" layoutX="410.0" layoutY="182.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="98.0" text="Search" />
+            <TextField fx:id="txtCreateAlbum" layoutX="410.0" layoutY="222" prefWidth="98" promptText="Enter name" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
